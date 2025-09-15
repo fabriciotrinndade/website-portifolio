@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabricio Trindade</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <a class="name">Fabricio Dev.</a>
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+            <img src="./img/png-website.png" class="foto-perfil">
+            <h1>Fabricio Trindade</h1>
+            <p class="cabecalho-subtitulo">
+                    Desenvolvedor Front End<br><br>
+                    <p class="texto-sociais">
+                        Meus Perfis
+                    </p>
+
+            <div class="sociais">
+                <a href="https://www.linkedin.com/in/fabricio-trindade/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/fabriciotrinndade/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/fabriciotrinndade" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://t.me/fabriciotrindade" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                </a>
+                        <a href="https://discord.com/users/1055639453131092020" target="_blank">
+                        <i class="fa-brands fa-discord"></i>
+                </a>
+                </div>
+                <div class="cabecalho-arrows">
+                    <p>
+                        <a href="#sobre">
+                        <i class="fa-solid fa-angles-down"></i>
+                        </a>
+                    </p>
+                </div>
+    </main>
+
+
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-desc">
+            <p>
+                Conheça um pouco sobre mim.
+            </p>
+            
+        </div>
+        <br><br>
+        <div class="sobre-box">
+            <p class="sobre-paragrafo">
+                Formado em Análise e Desenvolvimento de Sistemas e cursando pós-graduação em Engenharia de Computação. 
+                Estudo inglês e estou me especializando em desenvolvimento web com foco em HTML, CSS e JavaScript.
+                <br>Tenho experiência em atendimento ao público, o que me permite unir comunicação clara e empatia com o lado técnico da área de TI. 
+                Busco constantemente evoluir minhas habilidades e contribuir em projetos que envolvam inovação e crescimento profissional.
+            </p>
+        </div>
+        <div class="box-arrows">
+            <p>       
+                <br>
+                <a href="#projetos">
+                <i class="fa-solid fa-angles-down"></i>
+                </a>
+            </p>
+        </div>
+           
+
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Projetos</h2>
+            <p class="projetos-desc">
+                Projetos em que estive envolvido.
+        </div>
+        <br><br>
+        <div class="projetos-box">
+            
+            <div class="projetos-card">
+                <img src="./img/coming.jpg" class="projetos-imagem">
+                <h3 class="info-projetos">EM BREVE</h3>
+                <p class="paragrafo-projetos">Em breve um projeto aqui.</p>
+                
+            </div>
+                <div class="projetos-card">
+                <img src="./img/coming.jpg" class="projetos-imagem">
+                <h3 class="info-projetos">EM BREVE</h3>
+                <p class="paragrafo-projetos">Em breve um projeto aqui.</p>
+                
+            </div>
+                <div class="projetos-card">
+                <img src="./img/coming.jpg" class="projetos-imagem">
+                <h3 class="info-projetos">EM BREVE</h3>
+                <p class="paragrafo-projetos">Em breve um projeto aqui.</p>
+                
+            </div>
+        </div>
+        <div class="projetos-arrows">
+            <p>     
+                <br>
+                <br>
+                <a href="#contatos"> 
+                <i class="fa-solid fa-angles-down"></i>
+                </a> 
+            </p>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Contato</h2>
+        <div>
+            <a href="./img/Curriculo-Fabricio-Trindade.pdf" download class="botao-download">Baixe o meu currículo aqui!</a>
+        </div>
+        <p class="paragrafo-contatos">
+            Entre em contato comigo abaixo!
+        </p>
+        <div class="formulario-envio">
+            <form name="submit-to-google-sheet">
+                <input type="texto" name="Nome" placeholder="Seu Nome" required>
+                <input type="email" name="Email" placeholder="Seu Email" required>
+                <textarea name="Mensagem" rows="6" placeholder="Digite sua mensagem"></textarea>
+                <button type="enviar" class="botao-envio">Enviar</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Feito com <i class="fas fa-heart"></i> por Fabricio Trindade</p>
+        </div>
+    </section>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzO352Q0ytD1AKY1DvdD3hg2uTKxWpeb_QKT-oYXZmof4B5Zq85_k6y5fsiFEtlRjfIfA/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  const msg = document.getElementById('msg')
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Mensagem enviada!"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 3000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
