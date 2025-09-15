@@ -61,8 +61,8 @@ body {
     color: #8fbaff;
     text-decoration: none;
     font-size: 1.2rem;
-    justify-content: left;
     font-weight: bold;
+    left: 3rem;
 }
 
 .menu-link{
@@ -137,6 +137,9 @@ body {
 }
 
 .sociais i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
     color: #ffffff;
     padding: 1rem;
@@ -388,4 +391,34 @@ form input, form textarea{
     color: var(--primaria);
     margin-top: 20px;
     display: block;
+}
+
+
+/* --------------- site responsivo --------------- */ 
+
+@media only screen and (max-width: 600px){
+    .foto-perfil{
+    margin-top: 15%;
+    width: 180px;
+    height: 165px;
+    }
+    .cabecalho{
+        font-size: 0.6rem;
+    }
+    .cabecalho-subtitulo{
+        font-size: 0.7rem;
+    }
+    .texto-sociais{
+        font-size: 0.6rem;
+    }
+    .sociais i{
+        font-size: 20px;
+        max-width: 45px;
+        min-width: 35px;
+        max-height: 45px;
+        min-height: 35px;
+    }
+    .cabecalho-arrows a{
+        font-size: 0.9rem;
+    }
 }
