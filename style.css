@@ -534,6 +534,7 @@ form input, form textarea{
     color: var(--primaria);
     margin-top: 20px;
     display: block;
+    text-shadow: 3px 3px 5px #8fbaff;
 }
 
 /* --------------- COPYRIGHT --------------- */ 

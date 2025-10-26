@@ -5,23 +5,48 @@ const form = document.forms['submit-to-google-sheet']
 
 const msg = document.getElementById('msg')
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
+let currentLang = "pt"; // idioma padrão
 
-      if (lang === 'en') {
-        msg.innerHTML = "Message sent!";
-      } else {
-        msg.innerHTML = "Mensagem enviada!";
-      }
+// troca o idioma
+document.querySelectorAll("[data-lang]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentLang = btn.getAttribute("data-lang");
+  });
+});
 
-        setTimeout(function(){
-            msg.innerHTML = ""
-        }, 1000)
-        form.reset()
-      })
-  })
+// mensagens em cada idioma
+const messages = {
+  pt: {
+    success: "Mensagem enviada com sucesso!",
+    error: "Erro ao enviar. Tente novamente."
+  },
+  en: {
+    success: "Message sent successfully!",
+    error: "Error sending message. Please try again."
+  }
+};
+
+//envio do formulário
+form.addEventListener("submit", e => {
+  e.preventDefault();
+
+  //save dados antes de limpar
+  const formData = new FormData(form);
+
+  //mensagem instantânea
+  msg.innerHTML = messages[currentLang].success;
+
+  //limpa o formulário imediatamente
+  form.reset();
+  
+  //limpa mensagem em 2s
+  setTimeout(() => (msg.innerHTML = ""), 2000);
+
+  fetch(scriptURL, { method: "POST", body: formData })
+    .catch(() => {
+      msg.innerHTML = messages[currentLang].error;
+    });
+});
 
 /* ================ EFEITO NAVBAR (MANTER ATIVO) ================ */
 
