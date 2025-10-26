@@ -5,175 +5,213 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabricio Trindade</title>
     <link rel="icon" href="./img/circle.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <script src="form.js" defer></script>
 </head>
+
+<!--------------------------- PAGINA NAVBAR --------------------------->
+
 <body>
-
     <div class="particulas"></div>
-
+    <div class="toggle" onclick="toggleMenu();"></div>
     <nav class="navegacao">
-        <a class="name">Fabricio Dev.</a>
         <ul class="menu">
             <li>
-                <a href="#inicio" class="menu-link">Início</a>
+                <a class="name">Fabricio <span class="fa-solid fa-code"></span></a>
             </li>
             <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
+                <a href="#inicio" id="menu-home" class="menu-link" onclick="toggleMenu(this)" data-text="home">Início</a>
             </li>
             <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
+                <a href="#sobre" class="menu-link" onclick="toggleMenu(this)" data-text="about">Sobre</a>
             </li>
             <li>
-                <a href="#contatos" class="menu-link">Contato</a>
+                <a href="#projetos" class="menu-link" onclick="toggleMenu(this)" data-text="projects">Projetos</a>
             </li>
+            <li>
+                <a href="#contatos" class="menu-link" onclick="toggleMenu(this)" data-text="contact">Contato</a>
+            </li>
+            <div class="bandeiras">
+            <button data-lang="pt"><span class="fi fi-br"></span></button>
+            <button data-lang="en"><span class="fi fi-us"></span></button>
+            </div>
         </ul>
-    
+
+    </div>
     </nav>
 
-    <main id="inicio" class="cabecalho">
-            <img src="./img/png-website.png" class="foto-perfil">
-            <h1>Fabricio Trindade</h1>
-            <p class="cabecalho-subtitulo">
-                    Desenvolvedor Front End<br><br>
-                    <p class="texto-sociais">
-                        Meus Perfis
-                    </p>
+<!--------------------------- PAGINA CABECALHO --------------------------->
 
-            <div class="sociais">
+   <main id="inicio" class="cabecalho">
+    <div class="cabecalho-conteudo">
+        <img src="./img/png-website.png" class="foto-perfil" data-aos="fade-right" >
+
+        <div class="cabecalho-texto">
+            <div class="cabecalho-nome" data-aos="fade-down">
+                <p class="texto-ola">
+                    <span data-text="ola">Olá</span>
+                    <span class="cor-ola" data-text="exclamacao">!</span>
+                    <span data-text="intro">Eu sou o</span>
+                </p>
+                <p class="texto-nome">Fabricio Trindade</p>
+                </div>
+
+            <p class="cabecalho-subtitulo" data-aos="fade-left" data-text="textdeveloper">Desenvolvedor Front End</p>
+            <p data-aos="fade-left" data-text="textapaixonado">Apaixonado por tecnologia e por fazer acontecer.</p>
+            <div class="tecnologias-prog" data-aos="fade-left">
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-node-js"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+            </div>
+
+            <p class="cabecalho-subtitulo-sociais" data-aos="fade-left" data-text="textperfis">Meus Perfis</p>
+            <p data-aos="fade-left" data-text="textconect">Conecte-se comigo, será um prazer!</p>
+
+            <div class="sociais" data-aos="fade-left">
                 <a href="https://www.linkedin.com/in/fabricio-trindade/" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
                 <a href="https://www.instagram.com/fabriciotrinndade/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </a>
                 <a href="https://github.com/fabriciotrinndade" target="_blank">
-                        <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github"></i>
                 </a>
                 <a href="https://t.me/fabriciotrindade" target="_blank">
-                        <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-brands fa-telegram"></i>
                 </a>
-                        <a href="https://discord.com/users/1055639453131092020" target="_blank">
-                        <i class="fa-brands fa-discord"></i>
+                <a href="https://discord.com/users/1055639453131092020" target="_blank">
+                    <i class="fa-brands fa-discord"></i>
                 </a>
-                </div>
-                <div class="cabecalho-arrows">
-                    <p>
-                        <a href="#sobre">
-                        <i class="fa-solid fa-angles-down"></i>
-                        </a>
-                    </p>
-                </div>
-    </main>
+            </div>
+            <p class="texto-role" data-aos="fade-left" data-text="textrolebaixo">Role e veja mais sobre mim.</p>
+                <div class="cabecalho-arrows" data-aos="fade-up">
+        <a href="#sobre">
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
+    </div>
+        </div>
+    </div>
 
+</main>
 
+<!--------------------------- PAGINA SOBRE --------------------------->
 
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-desc">
+    <section id="sobre" class="sobre" >
+        <h2 class="sobre-titulo" data-aos="fade-right" data-text="textabout">Sobre Mim</h2>
+        <div class="sobre-desc" data-aos="fade-right" data-text="textaboutdesc">
             <p>
-                Conheça um pouco sobre mim.
+                Saiba mais sobre minha trajetória e o que me motiva na área de tecnologia.
             </p>
             
         </div>
         <br><br>
-        <div class="sobre-box">
-            <p class="sobre-paragrafo">
-                Formado em Análise e Desenvolvimento de Sistemas e cursando pós-graduação em Engenharia de Computação. 
-                Estudo inglês e estou me especializando em desenvolvimento web com foco em HTML, CSS e JavaScript.
-                <br>Tenho experiência em atendimento ao público, o que me permite unir comunicação clara e empatia com o lado técnico da área de TI. 
-                Busco constantemente evoluir minhas habilidades e contribuir em projetos que envolvam inovação e crescimento profissional.
+        <div class="sobre-box" data-aos="fade-left">
+            <img src="./img/fts.jpg" class="foto-sobre">
+            <p class="sobre-paragrafo" data-text="textaboutinfo">
+                Formado em Análise e Desenvolvimento de Sistemas e cursando pós-graduação em Engenharia de Computação, venho me especializando em desenvolvimento web, com foco em HTML, CSS e JavaScript.
+                Também estudo inglês e busco constantemente aprimorar minhas habilidades técnicas e interpessoais. Tenho experiência no atendimento ao público, o que me permite unir comunicação clara, empatia e resolução de problemas — qualidades que aplico no dia a dia da área de TI.
+                Gosto de aprender, evoluir e participar de projetos que envolvam inovação, tecnologia e crescimento profissional.
             </p>
         </div>
-        <div class="box-arrows">
-            <p>       
-                <br>
-                <a href="#projetos">
-                <i class="fa-solid fa-angles-down"></i>
-                </a>
-            </p>
-        </div>
-           
-
     </section>
 
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Projetos</h2>
-            <p class="projetos-desc">
-                Projetos em que estive envolvido.
+<!--------------------------- PAGINA PROJETOS --------------------------->
+
+    <section id="projetos" class="projetos" >
+        <div class="projetos-conteudo">
+        <h2 class="projetos-titulo" data-aos="fade-down" data-text="textproj">Projetos</h2>
+            <p class="projetos-desc" data-aos="fade-right" data-text="textprojdesc1">
+                Ainda estou construindo meu portfólio.<br>
+                <p data-text="textprojdesc2" data-aos="fade-right">Em breve você verá meus projetos aqui 🚀</p>
+            </p>
         </div>
         <br><br>
-        <div class="projetos-box">
+        <div class="projetos-box" >
             
-            <div class="projetos-card">
+            <div class="projetos-card" data-aos="fade-up">
                 <img src="./img/coming.jpg" class="projetos-imagem">
-                <h3 class="info-projetos">EM BREVE</h3>
-                <p class="paragrafo-projetos">Em breve um projeto aqui.</p>
+                <h3 class="info-projetos" data-text="projtitulo1">Projeto</h3>
+                <p class="paragrafo-projetos">        
+                    <span data-text="projtipo1">Tipo:</span>
+                    <br>
+                    <span data-text="projtec1">Tecnologias:</span>
+                </p>
+                <a href="#" class="btn-projeto" data-text="projseemore">Ver mais</a>
                 
             </div>
-                <div class="projetos-card">
+                <div class="projetos-card" data-aos="fade-down">
                 <img src="./img/coming.jpg" class="projetos-imagem">
-                <h3 class="info-projetos">EM BREVE</h3>
-                <p class="paragrafo-projetos">Em breve um projeto aqui.</p>
+                <h3 class="info-projetos" data-text="projtitulo2">Projeto</h3>
+                <p class="paragrafo-projetos">        
+                    <span data-text="projtipo2">Tipo:</span>
+                    <br>
+                    <span data-text="projtec2">Tecnologias:</span>
+                </p>
+                <a href="#" class="btn-projeto" data-text="projseemore">Ver mais</a>
                 
             </div>
-                <div class="projetos-card">
+                <div class="projetos-card" data-aos="fade-up">
                 <img src="./img/coming.jpg" class="projetos-imagem">
-                <h3 class="info-projetos">EM BREVE</h3>
-                <p class="paragrafo-projetos">Em breve um projeto aqui.</p>
+                <h3 class="info-projetos" data-text="projtitulo3">Projeto</h3>
+                <p class="paragrafo-projetos">        
+                    <span data-text="projtipo3">Tipo:</span>
+                    <br>
+                    <span data-text="projtec3">Tecnologias:</span>
+                </p>
+                <a href="#" class="btn-projeto" data-text="projseemore">Ver mais</a>
                 
-            </div>
-        </div>
-        <div class="projetos-arrows">
-            <p>     
-                <br>
-                <br>
-                <a href="#contatos"> 
-                <i class="fa-solid fa-angles-down"></i>
-                </a> 
-            </p>
+     </div>
+            <img src="./img/png-projetos.png" class="foto-projetos" data-aos="fade-left">
         </div>
     </section>
 
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contato</h2>
-        <div>
-            <a href="./img/Curriculo-Fabricio-Trindade.pdf" download class="botao-download">Baixe o meu currículo aqui!</a>
-        </div>
-        <p class="paragrafo-contatos">
-            Entre em contato comigo abaixo!
-        </p>
-        <div class="formulario-envio">
+<!--------------------------- PAGINA CONTATOS --------------------------->
+
+    <section  class="contatos">
+        <div id="contatos" class="contatos-conteudo">
+            <img src="./img/png-contato.png" class="foto-contatos" data-aos="fade-right">
+
+            <div class="contatos-texto-form">
+            <h2 class="contatos-titulo" data-aos="fade-down" data-text="contato">Contato</h2>
+            <p class="paragrafo-contatos" data-aos="fade-down">
+            <span data-text="contatosub1">Estou sempre aberto a novas oportunidades e colaborações.</span>
+            <br>
+            <span data-text="contatosub2">Se você quiser conversar sobre tecnologia, projetos ou parcerias, envie uma mensagem abaixo!</span>
+            </p>
+            <div class="formulario-envio" data-aos="fade-left">
             <form name="submit-to-google-sheet">
-                <input type="texto" name="Nome" placeholder="Seu Nome" required>
-                <input type="email" name="Email" placeholder="Seu Email" required>
-                <textarea name="Mensagem" rows="6" placeholder="Digite sua mensagem"></textarea>
-                <button type="enviar" class="botao-envio">Enviar</button>
+                <input data-text="formnome" type="texto" name="Nome" placeholder="Nome" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <textarea data-text="formmensagem" name="Mensagem" rows="6" placeholder="Digite sua mensagem"></textarea>
+                <button type="enviar" class="botao-envio"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
             <span id="msg"></span>
         </div>
-        <div class="copyright">
-            <p>Copyright © Feito com <i class="fas fa-heart"></i> por Fabricio Trindade</p>
-        </div>
+
     </section>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzO352Q0ytD1AKY1DvdD3hg2uTKxWpeb_QKT-oYXZmof4B5Zq85_k6y5fsiFEtlRjfIfA/exec'
-  const form = document.forms['submit-to-google-sheet']
+        
+<!--------------------------- COPYRIGHT --------------------------->
 
-  const msg = document.getElementById('msg')
+    <footer class="copyright">
+        <span data-text="copyrightmsg">Copyright © Feito com</span>
+        <i class="fas fa-heart"></i>
+        <span data-text="copyrightby"> por Fabricio Trindade</span>
+    </footer>
+    
+<!--------------------------- SCRIPT AOS EFEITO --------------------------->
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Mensagem enviada!"
-        setTimeout(function(){
-            msg.innerHTML = ""
-        }, 3000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+    <script>
+    AOS.init({
+        duration: 1000,
+        once: false,
+  });
+    </script>
+
 </body>
 </html>
