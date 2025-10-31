@@ -18,7 +18,7 @@ html {
     --padrao: #8fbaff;
     --grass: rgba(0, 0, 0, 0.9);
     --font: #000000;
-    --background: #070707;
+    --background: #000000;
     --background-2: #051631;
 }
 
@@ -28,6 +28,29 @@ body {
     overflow-x: hidden;
 }
 
+/* --------------- PARTICULAS FUNDO --------------- */ 
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle 6000px at 100% 50%,  #062988, transparent 20%),
+    var(--background);
+}
+
+/* --------------- SEPARADOR PAGINAS --------------- */
+
+hr {
+  border-top: 0.5px solid #777777; /* Creates a solid gray line */
+  align-content: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
 
 /* --------------- MENU NAVEGAÇÃO --------------- */ 
 
@@ -138,8 +161,9 @@ body {
     text-align: left;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
-         background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,
+    background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,
     rgb(8, 10, 26) 50%, rgba(6, 6, 63, 0.801) 100%);
+    box-shadow: #000000;
 }
 
 .cabecalho-conteudo {
@@ -397,7 +421,7 @@ h1{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 1200px;
     margin: 0 auto;
-    background: #111111;
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 50px;
     padding: 40px;
 }
@@ -405,8 +429,7 @@ h1{
 .projetos-card{
     display: block;
     border-radius: 20px;
-    backdrop-filter: blur(5px); 
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     overflow: hidden;
     transition: all 0.8s ease;
     margin: 20px;
@@ -436,7 +459,7 @@ h1{
 
 .btn-projeto {
     display: inline-block;
-    background: #1a283d;
+    background: #3d3d3d;
     color: var(--primaria);
     border-radius: 10px;
     margin-top: 10px;
@@ -452,7 +475,8 @@ h1{
 /* --------------- PAGINA CONTATOS --------------- */ 
 
 .contatos{
-    padding-bottom: 8rem;
+    min-height: 100vh;
+    padding-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -514,7 +538,7 @@ h1{
     margin: 10px auto;
     width: fit-content;
     padding: 12px 45px;
-    border-radius: 10px;
+    border-radius: 20px;
     background: #8fbaff;
     transition: background 0.5s ease;
 }
@@ -524,21 +548,21 @@ h1{
 }
 
 .botao-envio:hover{
-    background: #2f3986;
+    background: #04071f;
 }
 
 .contatos form{
-    background: #111111;
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 25px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 form input, form textarea{
     width: 96%;
     border: 0;
     outline: none;
-    background: #1f1f1f;
+    background: rgba(0, 0, 0, 0.4);
     padding: 15px;
     margin: 15px;
     color: #ffffff;
@@ -620,6 +644,20 @@ form input, form textarea{
 /* ----- Celulares pequenos ----- */
 @media only screen and (max-width: 480px) {
 
+/* PARTICULAS*/
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle 4000px at 180% 50%,  #062988, transparent 20%),
+    var(--background);
+}
+
 /* MENU */
 .menu {
     position: fixed;
@@ -660,6 +698,7 @@ form input, form textarea{
 
 /* CABEÇALHO */
 .cabecalho-conteudo {
+    min-height: 100svh;
     flex-direction: column;
     gap: 20px;
     text-align: center;
@@ -726,6 +765,7 @@ form input, form textarea{
 
 /* SOBRE */
 .sobre {
+    min-height: 100svh;
     padding: 6rem 1.5rem;
 }
 
@@ -758,9 +798,11 @@ form input, form textarea{
     padding: 30px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 7rem;
 }
 
 .projetos-titulo{
+    margin-top: 7rem;
     font-size: 1.8rem;
 }
 
@@ -782,6 +824,10 @@ form input, form textarea{
 }
 
 /* CONTATOS - FORM */
+.contatos{
+    min-height: 100svh;
+}
+
 .contatos-titulo{
     margin-top: 6rem;
     font-size: 1.8rem;
@@ -793,7 +839,6 @@ form input, form textarea{
 }
 
 .contatos form{
-    background: #111111;
     border-radius: 25px;
     width: 90%;
     margin-top: 10px;
@@ -817,6 +862,20 @@ form input, form textarea{
 /* ----- Telas médias e Tablets ----- */
 
 @media only screen and (min-width: 481px) and (max-width: 900px) {
+
+/* PARTICULAS*/
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle 5000px at 120% 50%,  #062988, transparent 20%),
+    var(--background);
+}
 
 /* MENU */
 .menu {
@@ -858,6 +917,7 @@ form input, form textarea{
 
 /* CABEÇALHO */
 .cabecalho-conteudo {
+    min-height: 100svh;
     flex-direction: column;
     gap: 20px;
     text-align: center;
@@ -923,6 +983,7 @@ form input, form textarea{
 
 /* SOBRE */
 .sobre {
+    min-height: 100svh;
     padding: 6rem 1.5rem;
 }
 
@@ -950,14 +1011,20 @@ form input, form textarea{
 }
 
 /* PROJETOS */
+.projetos{
+    min-height: 100svh;
+}
+
 .projetos-box {
     flex-direction: column;
     padding: 30px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 3rem;
 }
 
 .projetos-titulo{
+    margin-top: 7rem;
     font-size: 2.2rem;
 }
 
@@ -979,6 +1046,10 @@ form input, form textarea{
 }
 
 /* CONTATOS - FORM */
+.contatos{
+    min-height: 100svh;
+}
+
 .contatos-titulo{
     margin-top: 6rem;
     font-size: 2.2rem;
@@ -989,7 +1060,6 @@ form input, form textarea{
 }
 
 .contatos form{
-    background: #111111;
     border-radius: 25px;
     width: 85%;
     margin-top: 10px;
