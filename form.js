@@ -77,7 +77,7 @@ window.addEventListener('scroll', () => {
 
     menuLinks.forEach(link => {
         const section = document.querySelector(link.getAttribute('href'));
-        const sectionTop = section.offsetTop - 100; // ajuste do topo
+        const sectionTop = section.offsetTop - 200; // ajuste do topo
         const sectionHeight = section.clientHeight;
 
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {

@@ -20,7 +20,16 @@
     <div class="particulas"></div>
     <div class="toggle" onclick="toggleMenu();"></div>
     <nav class="navegacao">
-        <ul class="menu">
+
+          <!-- Botão hambúrguer -->
+  <div class="hamburguer" id="hamburguer">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+        <ul class="menu" id="menu">
+
             <li>
                 <a class="name">Fabricio <span class="fa-solid fa-code"></span></a>
             </li>
@@ -36,12 +45,11 @@
             <li>
                 <a href="#contatos" class="menu-link" onclick="toggleMenu(this)" data-text="contact">Contato</a>
             </li>
-            <div class="bandeiras">
+                <div class="bandeiras">
             <button data-lang="pt"><span class="fi fi-br"></span></button>
             <button data-lang="en"><span class="fi fi-us"></span></button>
-            </div>
+    </div>
         </ul>
-
     </div>
     </nav>
 
@@ -58,7 +66,7 @@
                     <span class="cor-ola" data-text="exclamacao">!</span>
                     <span data-text="intro">Eu sou o</span>
                 </p>
-                <p class="texto-nome">Fabricio Trindade</p>
+                <p class="texto-nome">FABRICIO TRINDADE</p>
                 </div>
 
             <p class="cabecalho-subtitulo" data-aos="fade-left" data-text="textdeveloper">Desenvolvedor Front End</p>
@@ -67,8 +75,7 @@
             <i class="fa-brands fa-html5"></i>
             <i class="fa-brands fa-node-js"></i>
             <i class="fa-brands fa-css3-alt"></i>
-            </div>
-
+            </div>  
             <p class="cabecalho-subtitulo-sociais" data-aos="fade-left" data-text="textperfis">Meus Perfis</p>
             <p data-aos="fade-left" data-text="textconect">Conecte-se comigo, será um prazer!</p>
 
@@ -88,16 +95,20 @@
                 <a href="https://discord.com/users/1055639453131092020" target="_blank">
                     <i class="fa-brands fa-discord"></i>
                 </a>
-            </div>
-            <p class="texto-role" data-aos="fade-left" data-text="textrolebaixo">Role e veja mais sobre mim.</p>
-                <div class="cabecalho-arrows" data-aos="fade-up">
-        <a href="#sobre">
-            <i class="fa-solid fa-arrow-down"></i>
-        </a>
+            </div>     
     </div>
         </div>
     </div>
-
+    
+    <div class="role-div">
+            <p class="texto-role" data-aos="fade-left" data-text="textrolebaixo">Role e veja mais sobre mim.</p>
+                <div class="cabecalho-mouse" data-aos="fade-up">
+        <div class="scroll-downs">
+        <div class="mousey">
+        <div class="scroller"></div>
+  </div>
+</div>
+     </div>
 </main>
 
 <!--------------------------- PAGINA SOBRE --------------------------->
@@ -112,12 +123,14 @@
         </div>
         <br><br>
         <div class="sobre-box" data-aos="fade-left">
-            <img src="./img/fts.jpg" class="foto-sobre">
+        <div class="conteudo-sobre">
+            <img src="./img/fts.png" class="foto-sobre">
             <p class="sobre-paragrafo" data-text="textaboutinfo">
                 Formado em Análise e Desenvolvimento de Sistemas e cursando pós-graduação em Engenharia de Computação, venho me especializando em desenvolvimento web, com foco em HTML, CSS e JavaScript.
                 Também estudo inglês e busco constantemente aprimorar minhas habilidades técnicas e interpessoais. Tenho experiência no atendimento ao público, o que me permite unir comunicação clara, empatia e resolução de problemas — qualidades que aplico no dia a dia da área de TI.
                 Gosto de aprender, evoluir e participar de projetos que envolvam inovação, tecnologia e crescimento profissional.
             </p>
+        </div>
         </div>
     </section>
 
@@ -128,7 +141,7 @@
         <h2 class="projetos-titulo" data-aos="fade-down" data-text="textproj">Projetos</h2>
             <p class="projetos-desc" data-aos="fade-right" data-text="textprojdesc1">
                 Ainda estou construindo meu portfólio.<br>
-                <p data-text="textprojdesc2" data-aos="fade-right">Em breve você verá meus projetos aqui 🚀</p>
+                <p class="projetos-desc2" data-text="textprojdesc2" data-aos="fade-right">Em breve você verá meus projetos aqui 🚀</p>
             </p>
         </div>
         <br><br>
@@ -166,8 +179,8 @@
                 </p>
                 <a href="#" class="btn-projeto" data-text="projseemore">Ver mais</a>
                 
-     </div>
-            <img src="./img/png-projetos.png" class="foto-projetos" data-aos="fade-left">
+            </div>
+
         </div>
     </section>
 
@@ -175,8 +188,6 @@
 
     <section  class="contatos">
         <div id="contatos" class="contatos-conteudo">
-            <img src="./img/png-contato.png" class="foto-contatos" data-aos="fade-right">
-
             <div class="contatos-texto-form">
             <h2 class="contatos-titulo" data-aos="fade-down" data-text="contato">Contato</h2>
             <p class="paragrafo-contatos" data-aos="fade-down">
@@ -184,6 +195,7 @@
             <br>
             <span data-text="contatosub2">Se você quiser conversar sobre tecnologia, projetos ou parcerias, envie uma mensagem abaixo!</span>
             </p>
+            <div class="formulario-sociais">
             <div class="formulario-envio" data-aos="fade-left">
             <form name="submit-to-google-sheet">
                 <input data-text="formnome" type="texto" name="Nome" placeholder="Nome" required>
@@ -193,7 +205,7 @@
             </form>
             <span id="msg"></span>
         </div>
-
+            </div>
     </section>
         
 <!--------------------------- COPYRIGHT --------------------------->
@@ -210,8 +222,28 @@
     AOS.init({
         duration: 1000,
         once: false,
+        disable: window.innerWidth <= 768 // desativar em celular e tablet
   });
     </script>
+
+<script>
+  const hamburguer = document.getElementById('hamburguer');
+  const menu = document.getElementById('menu');
+
+  hamburguer.addEventListener('click', () => {
+    hamburguer.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
+
+  // Fecha o menu ao clicar em um link
+  document.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburguer.classList.remove('active');
+      menu.classList.remove('active');
+    });
+  });
+</script>
+
 
 </body>
 </html>
