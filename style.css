@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    background-color: #0e0e0e;
+    background-color: #131313;
     color: var(--primaria);
     overflow-x: hidden;
 }
@@ -39,14 +39,14 @@ body {
     z-index: -1;
     opacity: 0.5;
     background: 
-    radial-gradient(circle 6000px at 100% 50%,  #062988, transparent 20%),
+    radial-gradient(circle 7000px at 120% 50%,  #0d0c4d, transparent 30%),
     var(--background);
 }
 
 /* --------------- SEPARADOR PAGINAS --------------- */
 
 hr {
-  border-top: 0.5px solid #777777; /* Creates a solid gray line */
+  border-top: 0.5px solid #161e38;
   align-content: center;
   margin-left: 15%;
   margin-right: 15%;
@@ -85,10 +85,20 @@ hr {
     display: flex;
     align-items: center;
     text-decoration: none;
+    justify-content: center;
     color: #ffffff;
-    font-size: 1.2rem;
-    padding: 0.4rem;
-    gap: 5px;
+    font-size: 1rem;
+}
+
+.namedev {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    color: #e57347;
+    font-size: 1rem;
+    padding: 0.6rem;
+    margin-left: -10px;
 }
 
 .menu-link{
@@ -140,7 +150,7 @@ hr {
         transform: scale(1.2);
 }
 
-/* ====== */
+/* =============== */
 
 /* --------------- PAGINA INICIAL --------------- */ 
 
@@ -163,7 +173,10 @@ hr {
     border-bottom-right-radius: 200px;
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,
     rgb(8, 10, 26) 50%, rgba(6, 6, 63, 0.801) 100%);
-    box-shadow: #000000;
+    box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
 }
 
 .cabecalho-conteudo {
@@ -213,10 +226,84 @@ hr {
     color: #ffffff;
 }
 
-.tecnologias-prog{
-    margin: 5px;
-    font-size: 2.5rem;
-    color: var(--primaria);
+/* EFEITO SCROLL TECNOLOGIAS */
+.tecnologias-prog {
+    width: 30rem;
+    max-width: 90vw;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1rem 0;
+    position: relative;
+    padding: 1.5rem 0;
+    overflow: hidden; 
+
+    -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+    );
+    mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.loop-slider {
+  .inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  background-color: #000000;
+  border-radius: 25px;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem;
+  box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+  
+  span {
+    font-size: 1rem;
+    color: #e57347;
+  }
+}
+
+.tag:hover{
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* =============== */
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .sociais {
@@ -233,23 +320,24 @@ hr {
 }
 
 .sociais i{
-    border: 1px solid #ffffff;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     color: var(--primaria);
     padding: 1.1rem;
     transition: all 0.2s ease;   
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     line-height: 35px;
-    
+    box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
 }
 
 .sociais i:hover{
-    box-shadow: 0 4px 4px #8fbaff;
     transform: translateY(-3px) scale(1.02);
 }
 
@@ -380,24 +468,8 @@ h1{
 
 /* --------------- PAGINA PROJETOS --------------- */ 
 
-.projetos{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.projetos-conteudo {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    flex-direction: column;
-               
-}
-
 .projetos-titulo{
+    margin-top: 5rem;
     font-size: 2.4rem;
     color: #7fa7ff;
 }
@@ -414,63 +486,140 @@ h1{
     color: var(--primaria);
 }
 
-.projetos-box{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: 1200px;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-    padding: 40px;
-}
-
-.projetos-card{
-    display: block;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    transition: all 0.8s ease;
-    margin: 20px;
-}
-
-.projetos-card:hover{
-    transform: translateY(-5px) scale(1.07) !important;
-}
-
-.projetos-imagem{
-    height: 170px;
-    width: 100%;
-    object-fit: cover;
-}
-
-.info-projetos{
-    margin-bottom: 4px;
-    text-align: center;
-}
-
 .paragrafo-projetos{
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: left;
-    margin-bottom: 8px;
-    margin-left: 4%;
+    margin-left: 5%;
 }
 
 .btn-projeto {
     display: inline-block;
     background: #3d3d3d;
     color: var(--primaria);
-    border-radius: 10px;
-    margin-top: 10px;
+    margin-top: 0;
     padding: 0.2rem 0.4rem;
     margin-bottom: 10px;
-    text-decoration: none;
+    width: 2.5rem;
+    height: 1.65rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: 70%;
 }
 
 .btn-projeto:hover{
-    box-shadow: 0 3px 4px #8fbaff;
+    background: #8fbaff;
 }
+
+.carousel-section {
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    padding: 4rem 0;
+  
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: visible; 
+    padding: 0;
+    min-height: 400px;
+      
+    -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+    );
+    mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.carousel {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.card {
+    flex: 0 0 250px;
+    height: 380px; 
+    margin: 0;
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.5;
+    transform: scale(0.8);
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform-origin: center center;
+    box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+    border-radius: 25px;
+    background-color: #0a0a0a;
+}
+
+.card img {
+    width: 100%;
+    height: 70%; 
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  
+}
+
+.card p {
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+  
+}
+
+.prev, .next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50px;
+    z-index: 5;
+    box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+}
+
+.prev:hover{
+    color: #8fbaff;
+ }
+
+.next:hover{   
+    color: #8fbaff;
+ }
+
+.prev { left: 18%; }
+.next { right: 18%; }
 
 /* --------------- PAGINA CONTATOS --------------- */ 
 
@@ -540,7 +689,7 @@ h1{
     width: fit-content;
     padding: 12px 45px;
     border-radius: 20px;
-    background: #8fbaff;
+    background: #3d3d3d;
     transition: background 0.5s ease;
 }
 
@@ -549,7 +698,7 @@ h1{
 }
 
 .botao-envio:hover{
-    background: #04071f;
+    background: #8fbaff;
 }
 
 .contatos form{
@@ -557,6 +706,10 @@ h1{
     border-radius: 25px;
     width: 100%;
     margin-top: 15px;
+    box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
 }
 
 form input, form textarea{
@@ -587,7 +740,7 @@ form input, form textarea{
     font-size: 0.8rem;
     width: 100%;
     text-align: center;
-    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.3);
     padding: 10px 0;
     font-weight: 300;
     bottom: 0;
@@ -697,6 +850,15 @@ form input, form textarea{
     left: 8px;
 }
 
+.name {
+    font-size: 0.9rem;
+
+}
+
+.namedev {
+    font-size: 0.9rem;
+}
+
 /* CABEÇALHO */
 .cabecalho-conteudo {
     min-height: 100svh;
@@ -794,14 +956,6 @@ form input, form textarea{
 }
 
 /* PROJETOS */
-.projetos-box {
-    flex-direction: column;
-    padding: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 7rem;
-}
-
 .projetos-titulo{
     margin-top: 7rem;
     font-size: 1.8rem;
@@ -816,13 +970,122 @@ form input, form textarea{
     font-size: 0.8rem;
 }
 
-.projetos-card{
-    margin: 10px;
+.paragrafo-projetos{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 5%;
 }
 
-.projetos-imagem{
-    height: 150px;
+.btn-projeto {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    color: var(--primaria);
+    margin-top: -30px;
+    margin-bottom: 0;
+    width: 2.5rem;
+    height: 1.65rem;
+    margin-left: 75%;
+    border-radius: 25%;
 }
+
+.btn-projeto:hover{
+    background: #8fbaff;
+}
+
+.carousel-section {
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    padding: 4rem 0;
+  
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: visible; 
+    padding: 0;
+    min-height: 280px;
+}
+
+.carousel {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.card {
+    flex: 0 0 250px;
+    width: 70%;
+    margin: 0;
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.5;
+    transform: scale(0.8);
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform-origin: center center;
+    padding-bottom: 2rem;
+    height: auto; 
+}
+
+.card img {
+    width: 100%;
+    height: 70%; 
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  
+}
+
+.card p {
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+  
+}
+
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.8);
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50px;
+    z-index: 5;
+    box-shadow: 
+    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+    margin-left: -3rem;
+    margin-right: -3rem;
+}
+
+.prev:hover{
+    color: #8fbaff;
+ }
+
+.next:hover{   
+    color: #8fbaff;
+ }
+
+.prev { left: 18%; }
+.next { right: 18%; }
 
 /* CONTATOS - FORM */
 .contatos{
@@ -914,6 +1177,14 @@ form input, form textarea{
 
 .bandeiras .fi{
     left: 8px;
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+.namedev {
+    font-size: 1.2rem;
 }
 
 /* CABEÇALHO */

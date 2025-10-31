@@ -31,7 +31,7 @@
         <ul class="menu" id="menu">
 
             <li>
-                <a class="name">Fabricio <span class="fa-solid fa-code"></span></a>
+                <a class="name">FABRICIO<p class="namedev">DEV</p></span></a>
             </li>
             <li>
                 <a href="#inicio" id="menu-home" class="menu-link" onclick="toggleMenu(this)" data-text="home">Início</a>
@@ -71,11 +71,27 @@
 
             <p class="cabecalho-subtitulo" data-aos="fade-left" data-text="textdeveloper">Desenvolvedor Front End</p>
             <p data-aos="fade-left" data-text="textapaixonado">Apaixonado por tecnologia e por fazer acontecer.</p>
-            <div class="tecnologias-prog" data-aos="fade-left">
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-node-js"></i>
-            <i class="fa-brands fa-css3-alt"></i>
+            
+            <div class="tecnologias-prog">
+                <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
+                    <div class="inner">
+                        <div class="tag"><span>•</span> FrontEnd</div>
+                        <div class="tag"><span>•</span> JavaScript</div>
+                        <div class="tag"><span>•</span> HTML</div>
+                        <div class="tag"><span>•</span> CSS</div>
+                        <div class="tag"><span>•</span> UI/UX</div>
+                        <!-- duplicado -->
+                        <div class="tag"><span>•</span> FrontEnd</div>
+                        <div class="tag"><span>•</span> JavaScript</div>
+                        <div class="tag"><span>•</span> HTML</div>
+                        <div class="tag"><span>•</span> CSS</div>
+                        <div class="tag"><span>•</span> UI/UX</div>
+            
+            </div>
+            <div class="fade"></div>
             </div>  
+            </div>
+
             <p class="cabecalho-subtitulo-sociais" data-aos="fade-left" data-text="textperfis">Meus Perfis</p>
             <p data-aos="fade-left" data-text="textconect">Conecte-se comigo, será um prazer!</p>
 
@@ -137,53 +153,60 @@
 <!--------------------------- PAGINA PROJETOS --------------------------->
 
 <hr> 
-    <section id="projetos" class="projetos" >
-        <div class="projetos-conteudo">
-        <h2 class="projetos-titulo" data-aos="fade-down" data-text="textproj">Projetos</h2>
-            <p class="projetos-desc" data-aos="fade-right" data-text="textprojdesc1">
+<section id="projetos" class="carousel-section">
+  <h2 class="projetos-titulo" data-aos="fade-down" data-text="textproj">Projetos</h2>
+  <p class="projetos-desc" data-aos="fade-right" data-text="textprojdesc1">
                 Ainda estou construindo meu portfólio.<br>
                 <p class="projetos-desc2" data-text="textprojdesc2" data-aos="fade-right">Em breve você verá meus projetos aqui 🚀</p>
-            </p>
-        </div>
-        <br><br>
-        <div class="projetos-box" >
-            
-            <div class="projetos-card" data-aos="fade-up">
-                <img src="./img/coming.jpg" class="projetos-imagem">
-                <h3 class="info-projetos" data-text="projtitulo1">Projeto</h3>
-                <p class="paragrafo-projetos">        
-                    <span data-text="projtipo1">Tipo:</span>
-                    <br>
-                    <span data-text="projtec1">Tecnologias:</span>
-                </p>
-                <a href="#" class="btn-projeto" data-text="projseemore">Ver mais</a>
-                
-            </div>
-                <div class="projetos-card" data-aos="fade-down">
-                <img src="./img/coming.jpg" class="projetos-imagem">
-                <h3 class="info-projetos" data-text="projtitulo2">Projeto</h3>
-                <p class="paragrafo-projetos">        
-                    <span data-text="projtipo2">Tipo:</span>
-                    <br>
-                    <span data-text="projtec2">Tecnologias:</span>
-                </p>
-                <a href="#" class="btn-projeto" data-text="projseemore">Ver mais</a>
-                
-            </div>
-                <div class="projetos-card" data-aos="fade-up">
-                <img src="./img/coming.jpg" class="projetos-imagem">
-                <h3 class="info-projetos" data-text="projtitulo3">Projeto</h3>
-                <p class="paragrafo-projetos">        
-                    <span data-text="projtipo3">Tipo:</span>
-                    <br>
-                    <span data-text="projtec3">Tecnologias:</span>
-                </p>
-                <a href="#" class="btn-projeto" data-text="projseemore">Ver mais</a>
-                
-            </div>
 
-        </div>
-    </section>
+<div class="carousel-container">
+  <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+  <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+
+  <div class="carousel">
+    <div class="card"><img src="./img/coming1.jpg" alt="Projeto 1"><p data-text="projtitulo1">Projeto</p>
+     <p class="paragrafo-projetos">        
+                    <span data-text="projtipo">Tipo:</span>
+                    <br>
+                    <span data-text="projtec">Tecnologias:</span>
+                </p>
+                
+                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
+    </div>
+    
+    
+    <div class="card"><img src="./img/coming2.jpg" alt="Projeto 2"><p data-text="projtitulo2">Projeto</p>
+     <p class="paragrafo-projetos">        
+                    <span data-text="projtipo">Tipo:</span>
+                    <br>
+                    <span data-text="projtec">Tecnologias:</span>
+                </p>
+                
+                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
+    </div>
+
+
+    <div class="card"><img src="./img/coming3.jpg" alt="Projeto 3"><p data-text="projtitulo3">Projeto</p>
+     <p class="paragrafo-projetos">        
+                    <span data-text="projtipo">Tipo:</span>
+                    <br>
+                    <span data-text="projtec">Tecnologias:</span>
+                </p>
+                
+                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
+    </div>
+
+        <div class="card"><img src="./img/coming4.jpg" alt="Projeto 4"><p data-text="projtitulo4">Projeto</p>
+     <p class="paragrafo-projetos">        
+                    <span data-text="projtipo">Tipo:</span>
+                    <br>
+                    <span data-text="projtec">Tecnologias:</span>
+                </p>
+                
+                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
+    </div>
+    
+</section>
 
 <!--------------------------- PAGINA CONTATOS --------------------------->
 

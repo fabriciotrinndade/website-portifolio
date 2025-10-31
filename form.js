@@ -158,3 +158,66 @@ fetch('textsEn.json')
     textsEn = data; // armazena os textos do JSON
   })
   .catch(err => console.error("Erro ao carregar o JSON:", err));
+
+/* ================ EFEITO CAROUSEL ================ */
+
+const carousel = document.querySelector('.carousel');
+const cards = Array.from(document.querySelectorAll('.carousel .card'));
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const total = cards.length;
+
+  cards.forEach((card, index) => {
+    card.classList.remove('active', 'left', 'right');
+
+    // calcula posição relativa ao card central
+    let offset = index - currentIndex;
+
+    // Loop infinito das imagens
+    if (offset < -Math.floor(total/2)) offset += total;
+    if (offset > Math.floor(total/2)) offset -= total;
+
+    // aplica classes e estilos
+    if (offset === 0) {
+      card.classList.add('active');
+      card.style.transform = `translateX(-50%) scale(1)`;
+      card.style.zIndex = -1;
+      card.style.opacity = 1;
+    } else if (offset < 0) {
+      card.classList.add('left');
+      card.style.transform = `translateX(${offset * 110 - 50}%) scale(0.8)`;
+      card.style.zIndex = 2;
+      card.style.opacity = 0.2;
+    } else if (offset > 0) {
+      card.classList.add('right');
+      card.style.transform = `translateX(${offset * 110 - 50}%) scale(0.8)`;
+      card.style.zIndex = 2;
+      card.style.opacity = 0.2;
+    }
+  });
+}
+
+function showNext() {
+  currentIndex = (currentIndex + 1) % cards.length;
+  updateCarousel();
+}
+
+function showPrev() {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateCarousel();
+}
+
+nextBtn.addEventListener('click', showNext);
+prevBtn.addEventListener('click', showPrev);
+
+updateCarousel();
+
+
+
+
+
+
