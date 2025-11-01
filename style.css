@@ -1016,6 +1016,7 @@ form input, form textarea{
 }
 
 .carousel {
+ 
     margin-top: 4rem;
     display: flex;
     justify-content: center;
@@ -1025,6 +1026,8 @@ form input, form textarea{
 }
 
 .card {
+    max-width: 100%;
+    box-sizing: border-box;
     flex: 0 0 250px;
     width: 70%;
     margin: 0;
