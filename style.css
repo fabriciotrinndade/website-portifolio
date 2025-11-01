@@ -998,7 +998,6 @@ form input, form textarea{
 }
 
 .carousel-section {
-    display: none;
     min-height: 100vh;
     text-align: center;
     color: white;
@@ -1009,7 +1008,7 @@ form input, form textarea{
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     overflow: visible; 
     padding: 0;
