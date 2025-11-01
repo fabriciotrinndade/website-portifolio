@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    background-color: #131313;
+    background-color: #252525;
     color: var(--primaria);
     overflow-x: hidden;
 }
@@ -39,7 +39,7 @@ body {
     z-index: -1;
     opacity: 0.5;
     background: 
-    radial-gradient(circle 7000px at 120% 50%,  #0d0c4d, transparent 30%),
+    radial-gradient(circle 5000px at 100% 50%,  #062988, transparent 30%),
     var(--background);
 }
 
@@ -172,7 +172,7 @@ hr {
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,
-    rgb(8, 10, 26) 50%, rgba(6, 6, 63, 0.801) 100%);
+    rgb(21, 52, 92) 50%, rgba(14, 23, 141, 0.801) 100%);
     box-shadow: 
     0 0.1rem 0.2rem rgb(0 0 0 / 20%),
     0 0.1rem 0.5rem rgb(0 0 0 / 30%),
@@ -567,13 +567,12 @@ h1{
     position: absolute;
     top: 50%; 
     left: 50%;
-    transform-origin: center center;
     box-shadow: 
     0 0.1rem 0.2rem rgb(0 0 0 / 20%),
     0 0.1rem 0.5rem rgb(0 0 0 / 30%),
     0 0.2rem 1.5rem rgb(0 0 0 / 40%);
     border-radius: 25px;
-    background-color: #0a0a0a;
+   
 }
 
 .card img {
@@ -736,7 +735,7 @@ form input, form textarea{
 /* --------------- COPYRIGHT --------------- */ 
 
 .copyright{
-    position: relative;
+    position: inline-block;
     font-size: 0.8rem;
     width: 100%;
     text-align: center;
@@ -744,6 +743,7 @@ form input, form textarea{
     padding: 10px 0;
     font-weight: 300;
     bottom: 0;
+    margin-top: -2rem;
 }
 
 .copyright i{
