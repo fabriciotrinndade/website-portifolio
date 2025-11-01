@@ -998,6 +998,7 @@ form input, form textarea{
 }
 
 .carousel-section {
+    display: none;
     min-height: 100vh;
     text-align: center;
     color: white;
