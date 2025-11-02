@@ -35,7 +35,7 @@ body::before {
   background: url('https://img.freepik.com/https://t4.ftcdn.net/jpg/02/99/47/75/360_F_299477563_cdcjnsMv6oM3AUZzzvx9RKByDCsXiryB.jpg-vector/grain-wall-pattern_1053-174.jpg?semt=ais_hybrid&w=740&q=80') repeat;
   background-size: 200px 200px;
   mix-blend-mode: overlay; /* ou soft-light */
-  opacity: 0.3;
+  opacity: 0.2;
   pointer-events: none;
   z-index: -1;
 }
