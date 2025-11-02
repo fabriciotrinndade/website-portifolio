@@ -28,6 +28,18 @@ body {
     overflow-x: hidden;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('https://img.freepik.com/https://t4.ftcdn.net/jpg/02/99/47/75/360_F_299477563_cdcjnsMv6oM3AUZzzvx9RKByDCsXiryB.jpg-vector/grain-wall-pattern_1053-174.jpg?semt=ais_hybrid&w=740&q=80') repeat;
+  background-size: 200px 200px;
+  mix-blend-mode: overlay; /* ou soft-light */
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* --------------- PARTICULAS FUNDO --------------- */ 
 
 .particulas{
@@ -39,14 +51,14 @@ body {
     z-index: -1;
     opacity: 0.5;
     background: 
-    radial-gradient(circle 5000px at 100% 50%,  #062988, transparent 30%),
+    radial-gradient(circle 5000px at 100% 50%,  #031649, transparent 30%),
     var(--background);
 }
 
 /* --------------- SEPARADOR PAGINAS --------------- */
 
 hr {
-  border-top: 0.5px solid #161e38;
+  border-top: 0.5px solid #242424;
   align-content: center;
   margin-left: 15%;
   margin-right: 15%;
@@ -171,12 +183,9 @@ hr {
     text-align: left;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
-    background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,
-    rgb(21, 52, 92) 50%, rgba(14, 23, 141, 0.801) 100%);
-    box-shadow: 
-    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
-    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
-    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+    background: radial-gradient(circle at 70% 30%, #1e2a47, #0d1117 80%);
+
+    
 }
 
 .cabecalho-conteudo {
@@ -215,15 +224,14 @@ hr {
     display: flex;
     flex-direction: column;
     font-size: 2.7rem;
-    font-weight: 900;
-    
+    font-weight: 900;    
 }
 
 .cabecalho-subtitulo {
     font-size: 1.8rem;
     font-weight: bold;
     margin-top: 20px;
-    color: #ffffff;
+    color: #8fbaff;
 }
 
 /* EFEITO SCROLL TECNOLOGIAS */
@@ -276,7 +284,7 @@ hr {
   gap: 0 0.2rem;
   color: #e2e8f0;
   font-size: 0.9rem;
-  background-color: #000000;
+  
   border-radius: 25px;
   padding: 0.7rem 1rem;
   margin-right: 1rem;
@@ -338,7 +346,9 @@ hr {
 }
 
 .sociais i:hover{
-    transform: translateY(-3px) scale(1.02);
+      transform: scale(1.1);
+  background: #8fbaff;
+  color: #0d1117;
 }
 
 .cabecalho-subtitulo-sociais{
@@ -415,22 +425,22 @@ h1{
 .sobre {
     min-height: 100vh;
     padding: 10rem 2rem;
-  
-  
     color: #fff;
     text-align: center;
 }
 
 .sobre-titulo {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
     font-size: 2.4rem;
-    color: #7fa7ff;
+    color: #ffffff;
 }
 
 .sobre-desc {
-    font-size: 1.1rem;
-    color: #ffffff;
+    font-size: 1rem;
+    color: #cfcfcf;
     margin-bottom: 3rem;
-    margin: 40px;
+    margin-top: 1rem;
 }
 
 .sobre-box {
@@ -469,21 +479,23 @@ h1{
 /* --------------- PAGINA PROJETOS --------------- */ 
 
 .projetos-titulo{
-    margin-top: 5rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    margin-top: 7rem;
     font-size: 2.4rem;
-    color: #7fa7ff;
+    color: #ffffff;
 }
 
 .projetos-desc{
-    margin-top: 40px;
-    font-size: 1.1rem;
-    color: var(--primaria);
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #cfcfcf;
 }
 
 .projetos-desc2{
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: var(--primaria);
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: #cfcfcf;
 }
 
 .paragrafo-projetos{
@@ -494,7 +506,7 @@ h1{
 
 .btn-projeto {
     display: inline-block;
-    background: #3d3d3d;
+    background: #131313;
     color: var(--primaria);
     margin-top: 0;
     padding: 0.2rem 0.4rem;
@@ -572,6 +584,8 @@ h1{
     0 0.1rem 0.5rem rgb(0 0 0 / 30%),
     0 0.2rem 1.5rem rgb(0 0 0 / 40%);
     border-radius: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
    
 }
 
@@ -593,11 +607,11 @@ h1{
 
 .prev, .next {
     position: absolute;
-    top: 40%;
+    top: 45%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.8);
+    background: linear-gradient(135deg, #8fbaff, #1960a7);
     border: none;
-    color: white;
+    color: #8fbaff;
     font-size: 2rem;
     padding: 8px;
     cursor: pointer;
@@ -610,11 +624,11 @@ h1{
 }
 
 .prev:hover{
-    color: #8fbaff;
+    color: #d2e3ff;
  }
 
 .next:hover{   
-    color: #8fbaff;
+    color: #d2e3ff;
  }
 
 .prev { left: 18%; }
@@ -622,7 +636,7 @@ h1{
 
 /* --------------- PAGINA CONTATOS --------------- */ 
 
-.contatos{
+.contatos {
     min-height: 100vh;
     padding-bottom: 1rem;
     display: flex;
@@ -632,44 +646,38 @@ h1{
 }
 
 .contatos-titulo {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
     display: flex;
     justify-content: center;
-    color: #7fa7ff;
+    color: #ffffff;
     font-size: 2.4rem;
 }
 
+.paragrafo-contatos{
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #cfcfcf;
+}
 
 .contatos-conteudo {
+    margin-top: 2rem;
     display: flex;   
     align-items: center;
     justify-content: center;
     gap: 60px;                
 }
 
-.formulario-sociais{
+.formulario-sociais {
     display: flex;
     flex-direction: column;
-}
-
-.contatos-texto-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 40px;
+    align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.paragrafo-contatos{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--primaria);
-    margin-bottom: 2rem;
-    margin-top: 40px;
-}
-
-.formulario-envio{
-    
+.formulario-envio {
     display: flex;
     justify-content: center;
     font-size: 2rem;
@@ -678,8 +686,43 @@ h1{
     flex-direction: column;  
 }
 
+.contatos-info {
+    margin-top: -2.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 30px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: var(--primaria);
+    text-align: left;
+    min-width: 250px;
+    box-shadow: 
+      0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+      0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+      0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+    transition: transform 0.3s ease;
+    width: 100%;
+}
 
-.botao-envio{
+.contatos-info h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contatos-info p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contatos-info i {
+    color: #8fbaff;
+}
+
+.botao-envio {
     font-size: 1rem;
     text-decoration: none;
     color: var(--primaria);
@@ -688,30 +731,34 @@ h1{
     width: fit-content;
     padding: 12px 45px;
     border-radius: 20px;
-    background: #3d3d3d;
-    transition: background 0.5s ease;
+    background: linear-gradient(135deg, #8fbaff, #1960a7);
+    transform: scale(1);
+    transition: all 0.2s;
 }
 
-.botao-envio i{
+.botao-envio i {
     font-size: 20px;
 }
 
-.botao-envio:hover{
-    background: #8fbaff;
+.botao-envio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(79, 160, 255, 0.4);
 }
 
-.contatos form{
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
+.contatos form {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 3rem;
     box-shadow: 
-    0 0.1rem 0.2rem rgb(0 0 0 / 20%),
-    0 0.1rem 0.5rem rgb(0 0 0 / 30%),
-    0 0.2rem 1.5rem rgb(0 0 0 / 40%);
+      0 0.1rem 0.2rem rgb(0 0 0 / 20%),
+      0 0.1rem 0.5rem rgb(0 0 0 / 30%),
+      0 0.2rem 1.5rem rgb(0 0 0 / 40%);
 }
 
-form input, form textarea{
+form input, form textarea {
     width: 96%;
     border: 0;
     outline: none;
@@ -808,7 +855,7 @@ form input, form textarea{
     z-index: -1;
     opacity: 0.5;
     background: 
-    radial-gradient(circle 3000px at 100% 50%,  #062988, transparent 20%),
+    radial-gradient(circle 3000px at 140% 50%,  #062988, transparent 20%),
     var(--background);
 }
 
@@ -937,6 +984,10 @@ form input, form textarea{
     gap: 1.5rem;
 }
 
+.sobre::before{
+    display: none;
+}
+
 .sobre-titulo {
     font-size: 1.8rem;
 }
@@ -962,12 +1013,19 @@ form input, form textarea{
 }
 
 .projetos-desc{
+    max-width: 100%;
+    padding: 2rem;
     font-size: 0.8rem;
+    margin-top: -1rem;
+    margin-bottom: -4.2rem;
 }
 
 .projetos-desc2{
-    margin-top: 20px;
+    max-width: 100%;
+    margin-top: 0.2rem;
     font-size: 0.8rem;
+    padding: 2rem;
+    margin-bottom: -4.2rem;
 }
 
 .paragrafo-projetos{
@@ -1095,17 +1153,36 @@ form input, form textarea{
 }
 
 .contatos-titulo{
-    margin-top: 6rem;
+    margin-top: -2rem;
     font-size: 1.8rem;
+}
+
+.contatos-info{
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -2.8rem;  
+    margin-bottom: 1rem;
+}
+
+.contatos-info h3{
+    font-size: 0.9rem;
+}
+
+.contatos-info p{
+    font-size: 0.8rem;
 }
 
 .paragrafo-contatos{
     font-size: 0.8rem;
-    max-width: 80%;
+    max-width: 100%;
+    padding: 2rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
 }
 
 .contatos form{
-    border-radius: 25px;
     width: 90%;
     margin-top: 10px;
 }
@@ -1279,6 +1356,10 @@ form input, form textarea{
     font-size: 1rem;
 }
 
+.sobre::before{
+    display: none;
+}
+
 .foto-sobre {
     margin-top: -2rem;
     width: 40%;
@@ -1333,8 +1414,24 @@ form input, form textarea{
     font-size: 1rem;
 }
 
+.contatos-info{
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: -2.8rem;  
+    margin-bottom: 1rem;
+}
+
+.contatos-info h3{
+    font-size: 1rem;
+}
+
+.contatos-info p{
+    font-size: 1rem;
+}
+
 .contatos form{
-    border-radius: 25px;
     width: 85%;
     margin-top: 10px;
 }

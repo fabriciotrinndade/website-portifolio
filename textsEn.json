@@ -15,8 +15,8 @@
   "textaboutdesc": "Learn more about my journey and what drives me in the field of technology.",
   "textaboutinfo": "Graduated in Systems Analysis and Development and currently pursuing a postgraduate degree in Computer Engineering, I have been specializing in web development, focusing on HTML, CSS, and JavaScript. I also study English and constantly strive to improve my technical and interpersonal skills. I have experience in customer service, which allows me to combine clear communication, empathy, and problem-solving — qualities I apply daily in the IT field. I enjoy learning, growing, and participating in projects that involve innovation, technology, and professional development.",
   "textproj": "Projects",
-  "textprojdesc1": "I'm still building my portfolio.",
-  "textprojdesc2": "Soon you'll see my projects here 🚀",
+  "textprojdesc1": "My portfolio is under construction, but soon you'll be able to explore the projects",
+  "textprojdesc2": "I'm developing — each one reflecting my growth and dedication in the field of technology.",
   "projtitulo1": "Project",
   "projtitulo2": "Project",
   "projtitulo3": "Project",
@@ -29,6 +29,7 @@
   "contatosub2": "If you'd like to talk about technology, projects, or partnerships, send a message below!",
   "formnome": "Name",
   "formmensagem": "Type your message",
+  "info-contato": "Contact Information",
   "copyrightmsg": "Copyright © Made with",
   "copyrightby": "by Fabricio Trindade"
 }

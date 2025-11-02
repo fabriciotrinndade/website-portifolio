@@ -138,10 +138,10 @@
             
         </div>
         <br><br>
-        <div class="sobre-box" data-aos="fade-left">
+        <div class="sobre-box">
         <div class="conteudo-sobre">
-            <img src="./img/fts.png" class="foto-sobre">
-            <div class="sobre-paragrafo" data-text="textaboutinfo">
+            <img src="./img/fts.png" class="foto-sobre" data-aos="fade-right">
+            <div class="sobre-paragrafo" data-text="textaboutinfo" data-aos="fade-left">
                 Formado em Análise e Desenvolvimento de Sistemas e cursando pós-graduação em Engenharia de Computação, venho me especializando em desenvolvimento web, com foco em HTML, CSS e JavaScript.
                 Também estudo inglês e busco constantemente aprimorar minhas habilidades técnicas e interpessoais. Tenho experiência no atendimento ao público, o que me permite unir comunicação clara, empatia e resolução de problemas — qualidades que aplico no dia a dia da área de TI.
                 Gosto de aprender, evoluir e participar de projetos que envolvam inovação, tecnologia e crescimento profissional.
@@ -156,8 +156,10 @@
 <section id="projetos" class="carousel-section">
   <h2 class="projetos-titulo" data-aos="fade-down" data-text="textproj">Projetos</h2>
   <p class="projetos-desc" data-aos="fade-right" data-text="textprojdesc1">
-                Ainda estou construindo meu portfólio.<br>
-                <p class="projetos-desc2" data-text="textprojdesc2" data-aos="fade-right">Em breve você verá meus projetos aqui 🚀</p>
+                Meu portfólio está em construção, mas em breve você poderá conhecer os projetos 
+                </p>
+                <p class="projetos-desc2" data-aos="fade-right" data-text="textprojdesc2">que estou desenvolvendo — cada um refletindo minha evolução e dedicação na área de tecnologia.
+                </p>        
 
 <div class="carousel-container">
   <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
@@ -229,10 +231,17 @@
                 <button type="enviar" class="botao-envio"><i class="fa-solid fa-paper-plane"></i></button>
             </form>
             <span id="msg"></span>
-            
         </div>
-            </div>
-          
+
+        <div class="contatos-info" data-aos="fade-right">
+          <h3 data-text="info-contato">Informações de Contato</h3>
+          <p><i class="fa-solid fa-envelope"></i>fabriciotrindade2001@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>(51) 98199-9014</p>
+           </div>
+      </div>
+    </div>
+  </div>
+            
     </section>
             
 <!--------------------------- COPYRIGHT --------------------------->
@@ -249,7 +258,7 @@
     AOS.init({
         duration: 1000,
         once: false,
-        disable: window.innerWidth <= 768 // desativar em celular e tablet
+        disable: window.innerWidth <= 1280 // desativar em celular e tablet
   });
     </script>
 
