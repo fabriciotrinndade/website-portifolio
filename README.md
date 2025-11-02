@@ -36,5 +36,6 @@ O site está hospedado na **Netlify** com **domínio próprio**, garantindo melh
 
 ## 🖼️ Preview
 
-![Screenshot do portfólio(img/pagina-completa.png)
+![Screenshot do portfólio](img/pagina-completa.png)
+
 
