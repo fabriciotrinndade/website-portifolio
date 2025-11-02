@@ -346,9 +346,9 @@ hr {
 }
 
 .sociais i:hover{
-      transform: scale(1.1);
-  background: #8fbaff;
-  color: #0d1117;
+   transform: scale(1.1);
+   background: #8fbaff;
+   color: #0d1117;
 }
 
 .cabecalho-subtitulo-sociais{
@@ -1120,8 +1120,9 @@ form input, form textarea {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
+    background: linear-gradient(135deg, #8fbaff, #1960a7);
     border: none;
-    color: white;
+    color: #8fbaff;
     font-size: 1.3rem;
     padding: 8px;
     cursor: pointer;
