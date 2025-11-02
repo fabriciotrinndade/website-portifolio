@@ -2,7 +2,7 @@
 
 Bem-vindo(a) ao repositório do meu **Website Portfólio**!  
 
-🔗 **Acesse o site:** [[https://seuusuario.github.io](https://seuusuario.github.io)](https://fabriciotrindade.com.br/)
+🔗 **Acesse o site:** (https://fabriciotrindade.com.br)
 
 ---
 
@@ -36,4 +36,5 @@ O site está hospedado na **Netlify** com **domínio próprio**, garantindo melh
 
 ## 🖼️ Preview
 
-![Screenshot do portfólio](img/pagina-completa)
+![Screenshot do portfólio(img/pagina-completa.png)
+
