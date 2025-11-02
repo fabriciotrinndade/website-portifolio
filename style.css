@@ -1120,7 +1120,6 @@ form input, form textarea {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.8);
     border: none;
     color: white;
     font-size: 1.3rem;
@@ -1135,14 +1134,6 @@ form input, form textarea {
     margin-left: -3rem;
     margin-right: -3rem;
 }
-
-.prev:hover{
-    color: #8fbaff;
- }
-
-.next:hover{   
-    color: #8fbaff;
- }
 
 .prev { left: 18%; }
 .next { right: 18%; }
