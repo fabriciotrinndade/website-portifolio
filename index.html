@@ -116,9 +116,9 @@
         </div>
     </div>
     
-    <div class="role-div">
-            <p class="texto-role" data-aos="fade-left" data-text="textrolebaixo">Role e veja mais sobre mim.</p>
-                <div class="cabecalho-mouse" data-aos="fade-up">
+    <div class="role-div" data-aos="fade-up" data-aos-delay="300">
+            <p class="texto-role" data-text="textrolebaixo">Role e veja mais sobre mim.</p>
+                <div class="cabecalho-mouse">
         <div class="scroll-downs">
         <div class="mousey">
         <div class="scroller"></div>
@@ -129,26 +129,76 @@
 
 <!--------------------------- PAGINA SOBRE --------------------------->
 
-    <section id="sobre" class="sobre" >
-        <h2 class="sobre-titulo" data-aos="fade-right" data-text="textabout">Sobre Mim</h2>
-        <div class="sobre-desc" data-aos="fade-right" data-text="textaboutdesc">
-            <p>
-                Saiba mais sobre minha trajetória e o que me motiva na área de tecnologia.
-            </p>
-            
+<section id="sobre" class="sobre">
+  <h2 class="sobre-titulo" data-aos="fade-right" data-text="textabout">Sobre Mim</h2>
+  <p class="sobre-intro" data-aos="fade-right" data-text="textaboutdesc">
+    Saiba mais sobre minha trajetória e o que me motiva na área de tecnologia.
+  </p>
+
+  <div class="sobre-container">
+
+
+    <div class="sobre-bloco" data-aos="fade-up">
+      <h3 data-text="texttrajetoria">Minha Trajetória</h3>
+      <p data-text="trajetoria1">
+        Sou formado em Análise e Desenvolvimento de Sistemas e atualmente curso 
+        pós-graduação em Engenharia de Computação. Tenho me dedicado ao 
+        desenvolvimento web, com foco em HTML, CSS e JavaScript, 
+        sempre buscando aprimorar minhas habilidades técnicas e criativas.
+      </p>
+      <p data-text="trajetoria2">
+        Minha experiência em atendimento ao público me ajudou a desenvolver uma 
+        comunicação clara e resolução eficiente de problemas — 
+        qualidades que aplico diariamente em projetos de tecnologia. 
+        Também estudo inglês avançado para expandir meus horizontes e colaborar 
+        com equipes internacionais.
+      </p>
+      <p data-text="trajetoria3">
+        Sou movido pela curiosidade, aprendizado contínuo e pela vontade de criar soluções 
+        que impactem positivamente as pessoas.
+      </p>
+    </div>
+
+
+    <div class="sobre-bloco" data-aos="fade-up" data-aos-delay="100">
+      <h3 data-text="text-skills">Habilidades Técnicas</h3>
+
+      
+      <div class="habilidades-grid">
+        <div class="habilidade-item">
+          <img src="./img/world.svg" class="worldicon"></img>
+          <span>English B2</span>
         </div>
-        <br><br>
-        <div class="sobre-box">
-        <div class="conteudo-sobre">
-            <img src="./img/fts.png" class="foto-sobre" data-aos="fade-right">
-            <div class="sobre-paragrafo" data-text="textaboutinfo" data-aos="fade-left">
-                Formado em Análise e Desenvolvimento de Sistemas e cursando pós-graduação em Engenharia de Computação, venho me especializando em desenvolvimento web, com foco em HTML, CSS e JavaScript.
-                Também estudo inglês e busco constantemente aprimorar minhas habilidades técnicas e interpessoais. Tenho experiência no atendimento ao público, o que me permite unir comunicação clara, empatia e resolução de problemas — qualidades que aplico no dia a dia da área de TI.
-                Gosto de aprender, evoluir e participar de projetos que envolvam inovação, tecnologia e crescimento profissional.
-            </div>
+        <div class="habilidade-item">
+            <img src="./img/js.svg" ></img>
+          <span>JavaScript</span>
         </div>
+        <div class="habilidade-item">
+           <img src="./img/css.svg" ></img>
+          <span>CSS3</span>
         </div>
-    </section>
+        <div class="habilidade-item">
+           <img src="./img/html.svg" ></img>
+          <span>HTML5</span>
+        </div>
+        <div class="habilidade-item">
+           <img src="./img/git.svg" ></img>
+          <span>Git</span>
+        </div>
+        <div class="habilidade-item">
+          <img src="./img/github.svg" ></img>
+          <span>GitHub</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sobre-cta" data-aos="fade-up" data-aos-delay="600">
+      <p data-text="text-ver-proj">Quer conhecer meus projetos e ver meu progresso?</p>
+      <a href="#projetos" class="botao-projetos" data-text="text-botao-sobre">Ver Projetos</a>
+    </div>
+
+  </div>
+</section>
 
 <!--------------------------- PAGINA PROJETOS --------------------------->
 
@@ -161,7 +211,7 @@
                 <p class="projetos-desc2" data-aos="fade-right" data-text="textprojdesc2">que estou desenvolvendo — cada um refletindo minha evolução e dedicação na área de tecnologia.
                 </p>        
 
-<div class="carousel-container">
+<div class="carousel-container" data-aos="fade-up" data-aos-delay="200">
   <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
   <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
 
