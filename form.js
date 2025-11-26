@@ -1,20 +1,14 @@
-/* ================ FUNCIONALIDADE FORMULÁRIO CONTATO GOOGLE SHEET ================ */
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzO352Q0ytD1AKY1DvdD3hg2uTKxWpeb_QKT-oYXZmof4B5Zq85_k6y5fsiFEtlRjfIfA/exec'
-const form = document.forms['submit-to-google-sheet']
-
-const msg = document.getElementById('msg')
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzO352Q0ytD1AKY1DvdD3hg2uTKxWpeb_QKT-oYXZmof4B5Zq85_k6y5fsiFEtlRjfIfA/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById('msg');
 
 let currentLang = "pt"; // idioma padrão
+let textsEn = {};       // textos carregados do JSON
+const originalTexts = {}; // textos originais (PT)
 
-// troca o idioma
-document.querySelectorAll("[data-lang]").forEach(btn => {
-  btn.addEventListener("click", () => {
-    currentLang = btn.getAttribute("data-lang");
-  });
-});
 
-// mensagens em cada idioma
+/* ========== FORMULÁRIO GOOGLE SHEETS ========== */
+
 const messages = {
   pt: {
     success: "Mensagem enviada com sucesso!",
@@ -26,198 +20,116 @@ const messages = {
   }
 };
 
-//envio do formulário
-form.addEventListener("submit", e => {
+function handleFormSubmit(e) {
   e.preventDefault();
 
-  //save dados antes de limpar
   const formData = new FormData(form);
 
-  //mensagem instantânea
-  msg.innerHTML = messages[currentLang].success;
+  // feedback instantâneo
+  msg.textContent = messages[currentLang].success;
 
-  //limpa o formulário imediatamente
+  // limpa form
   form.reset();
-  
-  //limpa mensagem em 2s
-  setTimeout(() => (msg.innerHTML = ""), 2000);
+
+  // remove mensagem depois de 2s
+  setTimeout(() => (msg.textContent = ""), 2000);
 
   fetch(scriptURL, { method: "POST", body: formData })
     .catch(() => {
-      msg.innerHTML = messages[currentLang].error;
+      msg.textContent = messages[currentLang].error;
     });
-});
+}
 
-/* ================ EFEITO NAVBAR (MANTER ATIVO) ================ */
+form.addEventListener("submit", handleFormSubmit);
 
+
+/* ========== NAVBAR ATIVA ========== */
+
+// sticky header
 window.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
-  if (!header) return; // evita erro se não existir
+  if (!header) return;
 
   window.addEventListener("scroll", () => {
     header.classList.toggle("sticky", window.scrollY > 0);
   });
 });
 
+// controle manual do menu
 let elActiveAnchor = null;
-
 function toggleMenu(elAnchor) {
   elActiveAnchor?.classList.remove('active');
   (elActiveAnchor = elAnchor).classList.add('active');
 }
-
 toggleMenu(document.getElementById("menu-home"));
 
-// alterar item navbar ao rolar pagina
-
+// ativa menu ao rolar
 const menuLinks = document.querySelectorAll('.menu-link');
 
 window.addEventListener('scroll', () => {
-    let current = '';
+  let current = '';
 
-    menuLinks.forEach(link => {
-        const section = document.querySelector(link.getAttribute('href'));
-        const sectionTop = section.offsetTop - 200; // ajuste do topo
-        const sectionHeight = section.clientHeight;
+  menuLinks.forEach(link => {
+    const section = document.querySelector(link.getAttribute('href'));
+    const sectionTop = section.offsetTop - 200;
+    const sectionHeight = section.clientHeight;
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = link.getAttribute('href');
-        }
-    });
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      current = link.getAttribute('href');
+    }
+  });
 
-    menuLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === current) {
-            link.classList.add('active');
-        }
-    });
+  menuLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === current) {
+      link.classList.add('active');
+    }
+  });
 });
 
-/* ================ ALTERAR PT / EN ================ */
 
-let textsEn = {}; // variavel global que vai receber o JSON
+/* ========== PT/EN ========== */
 
-// guarda os textos originais do HTML (PT)
-const originalTexts = {};
+// salvar textos originais (PT)
 document.querySelectorAll("[data-text]").forEach(el => {
   const key = el.getAttribute("data-text");
-
-  // armazena placeholder se for input/textarea, senão textContent
-  if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-    originalTexts[key] = el.placeholder;
-  } else {
-    originalTexts[key] = el.textContent;
-  }
+  originalTexts[key] = (el.tagName === "INPUT" || el.tagName === "TEXTAREA")
+    ? el.placeholder
+    : el.textContent;
 });
 
-
-// função para mudar idioma
+// trocar idioma
 function changeLang(lang) {
+  currentLang = lang;
+
   document.querySelectorAll("[data-text]").forEach(el => {
     const key = el.getAttribute("data-text");
+    const text = (lang === "en") ? textsEn[key] || originalTexts[key] : originalTexts[key];
 
-    // inputs e textareas usam placeholder
     if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-      if (lang === "en") {
-        el.placeholder = textsEn[key] || originalTexts[key];
-      } else {
-        el.placeholder = originalTexts[key];
-      }
-    } else { // elementos normais usam textcontent
-      if (lang === "en") {
-        el.textContent = textsEn[key] || originalTexts[key];
-      } else {
-        el.textContent = originalTexts[key];
-      }
+      el.placeholder = text;
+    } else {
+      el.textContent = text;
     }
   });
 }
 
-
-// inicializa botões
+// botões de idioma
 document.querySelectorAll("button[data-lang]").forEach(btn => {
   btn.addEventListener("click", () => {
-    const lang = btn.getAttribute("data-lang");
-    changeLang(lang);
+    changeLang(btn.dataset.lang);
 
-    // atualiza classe ativa
     document.querySelectorAll("button[data-lang]").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
   });
 });
 
-// define idioma padrão (PT)
-const defaultBtn = document.querySelector('button[data-lang="pt"]');
-defaultBtn.classList.add("active");
+// ativa PT ao carregar
+document.querySelector('button[data-lang="pt"]').classList.add("active");
 changeLang("pt");
 
-// carrega o arquivo JSON com os textos em inglês
+// carrega JSON EN
 fetch('textsEn.json')
-  .then(response => response.json())
-  .then(data => {
-    textsEn = data; // armazena os textos do JSON
-  })
+  .then(res => res.json())
+  .then(data => (textsEn = data))
   .catch(err => console.error("Erro ao carregar o JSON:", err));
-
-/* ================ EFEITO CAROUSEL ================ */
-
-const carousel = document.querySelector('.carousel');
-const cards = Array.from(document.querySelectorAll('.carousel .card'));
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-
-let currentIndex = 0;
-
-function updateCarousel() {
-  const total = cards.length;
-
-  cards.forEach((card, index) => {
-    card.classList.remove('active', 'left', 'right');
-
-    // calcula posição relativa ao card central
-    let offset = index - currentIndex;
-
-    // Loop infinito das imagens
-    if (offset < -Math.floor(total/2)) offset += total;
-    if (offset > Math.floor(total/2)) offset -= total;
-
-    // aplica classes e estilos
-    if (offset === 0) {
-      card.classList.add('active');
-      card.style.transform = `translateX(-50%) scale(1)`;
-      card.style.zIndex = -1;
-      card.style.opacity = 1;
-    } else if (offset < 0) {
-      card.classList.add('left');
-      card.style.transform = `translateX(${offset * 110 - 50}%) scale(0.8)`;
-      card.style.zIndex = 2;
-      card.style.opacity = 0.2;
-    } else if (offset > 0) {
-      card.classList.add('right');
-      card.style.transform = `translateX(${offset * 110 - 50}%) scale(0.8)`;
-      card.style.zIndex = 2;
-      card.style.opacity = 0.2;
-    }
-  });
-}
-
-function showNext() {
-  currentIndex = (currentIndex + 1) % cards.length;
-  updateCarousel();
-}
-
-function showPrev() {
-  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-  updateCarousel();
-}
-
-nextBtn.addEventListener('click', showNext);
-prevBtn.addEventListener('click', showPrev);
-
-updateCarousel();
-
-
-
-
-
-

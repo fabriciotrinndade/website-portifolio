@@ -17,6 +17,8 @@
 <!--------------------------- PAGINA NAVBAR --------------------------->
 
 <body>
+<div class="grain"></div>
+
     <div class="particulas"></div>
     <div class="toggle" onclick="toggleMenu();"></div>
     <nav class="navegacao">
@@ -54,13 +56,14 @@
     </nav>
 
 <!--------------------------- PAGINA CABECALHO --------------------------->
-
+    
    <main id="inicio" class="cabecalho">
-    <div class="cabecalho-conteudo">
-        <img src="./img/png-website.png" class="foto-perfil" data-aos="fade-right" >
+    <div class="background"></div>
+    <div class="cabecalho-conteudo" data-aos="fade-down" data-aos-offset="200">
+        <img src="./img/png-website.png" class="foto-perfil">
 
         <div class="cabecalho-texto">
-            <div class="cabecalho-nome" data-aos="fade-down">
+            <div class="cabecalho-nome">
                 <p class="texto-ola">
                     <span data-text="ola">Olá</span>
                     <span class="cor-ola" data-text="exclamacao">!</span>
@@ -69,19 +72,19 @@
                 <p class="texto-nome">FABRICIO TRINDADE</p>
                 </div>
 
-            <p class="cabecalho-subtitulo" data-aos="fade-left" data-text="textdeveloper">Desenvolvedor Front End</p>
-            <p data-aos="fade-left" data-text="textapaixonado">Apaixonado por tecnologia e por fazer acontecer.</p>
+            <p class="cabecalho-subtitulo" data-text="textdeveloper">Desenvolvedor</p>
+            <p data-text="textapaixonado">Apaixonado por tecnologia e por fazer acontecer.</p>
             
             <div class="tecnologias-prog">
                 <div class="loop-slider" style="--duration:15951ms; --direction:normal;">
                     <div class="inner">
-                        <div class="tag"><span>•</span> FrontEnd</div>
+                        <div class="tag"><span>•</span> Git</div>
                         <div class="tag"><span>•</span> JavaScript</div>
                         <div class="tag"><span>•</span> HTML</div>
                         <div class="tag"><span>•</span> CSS</div>
                         <div class="tag"><span>•</span> UI/UX</div>
                         <!-- duplicado -->
-                        <div class="tag"><span>•</span> FrontEnd</div>
+                        <div class="tag"><span>•</span> Git</div>
                         <div class="tag"><span>•</span> JavaScript</div>
                         <div class="tag"><span>•</span> HTML</div>
                         <div class="tag"><span>•</span> CSS</div>
@@ -92,10 +95,13 @@
             </div>  
             </div>
 
-            <p class="cabecalho-subtitulo-sociais" data-aos="fade-left" data-text="textperfis">Meus Perfis</p>
-            <p data-aos="fade-left" data-text="textconect">Conecte-se comigo, será um prazer!</p>
+           <div class="botoesInicio">
+                <a href="#projetos"><span data-text="text-btn-1">Veja meu trabalho</span><i class="fas fa-arrow-right"></i></a>
+                <a href="#contatos"><span data-text="text-btn-2">Entre em contato</span></a>
+            </div>
 
-            <div class="sociais" data-aos="fade-left">
+            
+             <div class="sociais">
                 <a href="https://www.linkedin.com/in/fabricio-trindade/" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
@@ -111,12 +117,12 @@
                 <a href="https://discord.com/users/1055639453131092020" target="_blank">
                     <i class="fa-brands fa-discord"></i>
                 </a>
-            </div>     
+            </div>   
     </div>
         </div>
     </div>
     
-    <div class="role-div" data-aos="fade-up" data-aos-delay="300">
+    <div class="role-div">
             <p class="texto-role" data-text="textrolebaixo">Role e veja mais sobre mim.</p>
                 <div class="cabecalho-mouse">
         <div class="scroll-downs">
@@ -130,150 +136,187 @@
 <!--------------------------- PAGINA SOBRE --------------------------->
 
 <section id="sobre" class="sobre">
-  <h2 class="sobre-titulo" data-aos="fade-right" data-text="textabout">Sobre Mim</h2>
-  <p class="sobre-intro" data-aos="fade-right" data-text="textaboutdesc">
-    Saiba mais sobre minha trajetória e o que me motiva na área de tecnologia.
-  </p>
+  <div class="backgroundD"></div>
+  <div class="sobre-container-2col">
 
-  <div class="sobre-container">
-
-
-    <div class="sobre-bloco" data-aos="fade-up">
-      <h3 data-text="texttrajetoria">Minha Trajetória</h3>
-      <p data-text="trajetoria1">
-        Sou formado em Análise e Desenvolvimento de Sistemas e atualmente curso 
-        pós-graduação em Engenharia de Computação. Tenho me dedicado ao 
-        desenvolvimento web, com foco em HTML, CSS e JavaScript, 
-        sempre buscando aprimorar minhas habilidades técnicas e criativas.
+    <!-- COLUNA ESQUERDA -->
+    <div class="sobre-col-esquerda" data-aos="fade-right" data-aos-offset="200">
+      <h2 class="sobre-titulo" data-text="textabout">SOBRE MIM</h2>
+      <p class="sobre-intro" data-text="textaboutdesc">
+        Saiba mais sobre minha trajetória e o que me motiva na área da tecnologia.
       </p>
-      <p data-text="trajetoria2">
-        Minha experiência em atendimento ao público me ajudou a desenvolver uma 
-        comunicação clara e resolução eficiente de problemas — 
-        qualidades que aplico diariamente em projetos de tecnologia. 
-        Também estudo inglês avançado para expandir meus horizontes e colaborar 
-        com equipes internacionais.
-      </p>
-      <p data-text="trajetoria3">
-        Sou movido pela curiosidade, aprendizado contínuo e pela vontade de criar soluções 
-        que impactem positivamente as pessoas.
-      </p>
-    </div>
 
-
-    <div class="sobre-bloco" data-aos="fade-up" data-aos-delay="100">
-      <h3 data-text="text-skills">Habilidades Técnicas</h3>
-
-      
-      <div class="habilidades-grid">
-        <div class="habilidade-item">
-          <img src="./img/world.svg" class="worldicon"></img>
-          <span>English B2</span>
-        </div>
-        <div class="habilidade-item">
-            <img src="./img/js.svg" ></img>
-          <span>JavaScript</span>
-        </div>
-        <div class="habilidade-item">
-           <img src="./img/css.svg" ></img>
-          <span>CSS3</span>
-        </div>
-        <div class="habilidade-item">
-           <img src="./img/html.svg" ></img>
-          <span>HTML5</span>
-        </div>
-        <div class="habilidade-item">
-           <img src="./img/git.svg" ></img>
-          <span>Git</span>
-        </div>
-        <div class="habilidade-item">
-          <img src="./img/github.svg" ></img>
-          <span>GitHub</span>
-        </div>
+      <div class="sobre-bloco">
+        <h3 data-text="texttrajetoria">Minha Trajetória</h3>
+        <p data-text="trajetoria1">
+          Sou formado em Análise e Desenvolvimento de Sistemas e atualmente curso 
+          pós-graduação em Engenharia de Computação. Tenho me dedicado ao 
+          desenvolvimento web, com foco em HTML, CSS e JavaScript, 
+          sempre buscando aprimorar minhas habilidades técnicas e criativas.
+        </p>
+        <p data-text="trajetoria2">
+          Minha experiência em atendimento ao público me ajudou a desenvolver uma 
+          comunicação clara e resolução eficiente de problemas — 
+          qualidades que aplico diariamente em projetos de tecnologia. 
+          Também estudo inglês avançado para expandir meus horizontes e colaborar 
+          com equipes internacionais.
+        </p>
       </div>
     </div>
 
-    <div class="sobre-cta" data-aos="fade-up" data-aos-delay="600">
-      <p data-text="text-ver-proj">Quer conhecer meus projetos e ver meu progresso?</p>
-      <a href="#projetos" class="botao-projetos" data-text="text-botao-sobre">Ver Projetos</a>
-    </div>
+<div class="sobre-col-direita" data-aos="fade-left" data-aos-offset="200">
 
-  </div>
+<ul class="skills-bar-container">
+
+  <li>
+    <div class="progressbar-title">
+      <h3>HTML5</h3>
+      <span class="percent" id="html-pourcent"></span>
+    </div>
+    <div class="bar-container">
+      <span class="progressbar" id="progress-html"></span>
+    </div>
+  </li>
+
+  <li>
+    <div class="progressbar-title">
+      <h3>CSS3</h3>
+      <span class="percent" id="css-pourcent"></span>
+    </div>
+    <div class="bar-container">
+      <span class="progressbar" id="progress-css"></span>
+    </div>
+  </li>
+
+  <li>
+    <div class="progressbar-title">
+      <h3>JavaScript</h3>
+      <span class="percent" id="javascript-pourcent"></span>
+    </div>
+    <div class="bar-container">
+      <span class="progressbar" id="progress-javascript"></span>
+    </div>
+  </li>
+
+  <li>
+    <div class="progressbar-title">
+      <h3>Git & GitHub</h3>
+      <span class="percent" id="git-pourcent"></span>
+    </div>
+    <div class="bar-container">
+      <span class="progressbar" id="progress-git"></span>
+    </div>
+  </li>
+
+  <li>
+    <div class="progressbar-title">
+      <h3>UI/UX</h3>
+      <span class="percent" id="uiux-pourcent"></span>
+    </div>
+    <div class="bar-container">
+      <span class="progressbar" id="progress-uiux"></span>
+    </div>
+  </li>
+
+</ul>
+
+
+</div>
+
 </section>
+
 
 <!--------------------------- PAGINA PROJETOS --------------------------->
 
 <hr> 
-<section id="projetos" class="carousel-section">
-  <h2 class="projetos-titulo" data-aos="fade-down" data-text="textproj">Projetos</h2>
-  <p class="projetos-desc" data-aos="fade-right" data-text="textprojdesc1">
-                Meu portfólio está em construção, mas em breve você poderá conhecer os projetos 
-                </p>
-                <p class="projetos-desc2" data-aos="fade-right" data-text="textprojdesc2">que estou desenvolvendo — cada um refletindo minha evolução e dedicação na área de tecnologia.
-                </p>        
+<section id="projetos" class="projetos-section">
+  <div class="backgroundE"></div>
+  <h2 class="projetos-titulo" data-aos="fade-right" data-aos-offset="200" data-text="textproj">PROJETOS</h2>
+  <p class="projetos-desc" data-text="textprojdesc1" data-aos="fade-right" data-aos-offset="200">
+    Projetos que refletem minha evolução como desenvolvedor. 
+  </p>
 
-<div class="carousel-container" data-aos="fade-up" data-aos-delay="200">
-  <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-  <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+  <div class="projetos-grid" data-aos="fade-left" data-aos-offset="200">
 
-  <div class="carousel">
-    <div class="card"><img src="./img/coming1.jpg" alt="Projeto 1"><p data-text="projtitulo1">Projeto</p>
-     <p class="paragrafo-projetos">        
-                    <span data-text="projtipo">Tipo:</span>
-                    <br>
-                    <span data-text="projtec">Tecnologias:</span>
-                </p>
-                
-                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
-    </div>
-    
-    
-    <div class="card"><img src="./img/coming2.jpg" alt="Projeto 2"><p data-text="projtitulo2">Projeto</p>
-     <p class="paragrafo-projetos">        
-                    <span data-text="projtipo">Tipo:</span>
-                    <br>
-                    <span data-text="projtec">Tecnologias:</span>
-                </p>
-                
-                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
-    </div>
+   <div class="card">
+  <img src="./img/proj1.png" alt="Projeto 1">
+
+  <div class="tech-badges">
+    <span class="tech-badge">HTML</span>
+    <span class="tech-badge">CSS</span>
+    <span class="tech-badge">JavaScript</span>
+    <span class="tech-badge">Google Sheets API</span>
+  </div>
+
+  <h3 class="proj-titulo" data-text="proj-titulo-1">Website Institucional</h3>
+
+  <p class="proj-desc" data-text="proj-desc-1">
+    Site institucional para uma empresa real do setor automotivo, que atende mais de 150 clientes por mês. Fortalecendo a presença online da empresa e aumentando sua visibilidade digital.
+  </p>
+
+  <div class="botoesProjeto">
+    <a href="https://lavagemdopekeno.com.br" target="_blank"><i class="fa-solid fa-eye"></i><span data-text="btn-ver-proj">Ver projeto</span></a>
+  </div>
+</div>
+
+      <div class="card">
+  <img src="./img/proj2.png" alt="Projeto 1">
+
+  <div class="tech-badges">
+    <span class="tech-badge">HTML</span>
+    <span class="tech-badge">CSS</span>
+    <span class="tech-badge">JavaScript</span>
+  </div>
+
+  <h3 class="proj-titulo" data-text="proj-titulo-2">Mini Game - Runner Boy</h3>
+
+  <p class="proj-desc" data-text="proj-desc-2">
+    Mini game interativo desenvolvido usando HTML, CSS e JavaScript. O jogador controla o personagem e deve pular obstáculos enquanto o fundo se move dinamicamente.
+  </p>
+
+  <div class="botoesProjeto">
+    <a href="https://github.com/fabriciotrinndade/runner-boy-game" target="_blank"><i class="fa-brands fa-github"></i><span data-text="btn-ver-git">Ver código</span></a>
+  </div>
+</div>
+
+   <div class="card">
+  <img src="./img/proj3.jpg" alt="Projeto 1">
 
 
-    <div class="card"><img src="./img/coming3.jpg" alt="Projeto 3"><p data-text="projtitulo3">Projeto</p>
-     <p class="paragrafo-projetos">        
-                    <span data-text="projtipo">Tipo:</span>
-                    <br>
-                    <span data-text="projtec">Tecnologias:</span>
-                </p>
-                
-                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
-    </div>
 
-        <div class="card"><img src="./img/coming4.jpg" alt="Projeto 4"><p data-text="projtitulo4">Projeto</p>
-     <p class="paragrafo-projetos">        
-                    <span data-text="projtipo">Tipo:</span>
-                    <br>
-                    <span data-text="projtec">Tecnologias:</span>
-                </p>
-                
-                <a href="#" class="btn-projeto"><i class="fa-solid fa-eye"></i></a>
-    </div>
-    
+  <h3 class="proj-titulo" data-text="proj-titulo-3">EM BREVE</h3>
+
+  <p class="proj-desc" data-text="proj-desc-3">
+    Projeto em construção no momento. Atualizações chegarão em breve!
+  </p>
+
+  <div class="botoesProjeto">
+  <a href="#" target="_blank"><i class="fa-solid fa-eye"></i><span data-text="btn-ver-proj">Ver projeto</span></a>
+  <a href="#" target="_blank"><i class="fa-brands fa-github"></i><span data-text="btn-ver-git">Ver código</span></a>
+  </div>
+</div>
+
+
+
+  </div>
 </section>
 
 <!--------------------------- PAGINA CONTATOS --------------------------->
 
 <hr> 
-    <section  class="contatos">
+    <section id="contatos" class="contatos">
+      <div class="background2"></div>
         <div id="contatos" class="contatos-conteudo">
             <div class="contatos-texto-form">
-            <h2 class="contatos-titulo" data-aos="fade-down" data-text="contato">Contato</h2>
-            <p class="paragrafo-contatos" data-aos="fade-down">
+            <h2 class="contatos-titulo" data-aos="fade-down" data-aos-offset="200" data-text="contato">CONTATO</h2>
+            <p class="paragrafo-contatos" data-aos="fade-down" data-aos-offset="200">
             <span data-text="contatosub1">Estou sempre aberto a novas oportunidades e colaborações.</span>
             <br>
             <span data-text="contatosub2">Se você quiser conversar sobre tecnologia, projetos ou parcerias, envie uma mensagem abaixo!</span>
             </p>
+            <div data-aos="fade-up" data-aos-offset="200">
             <div class="formulario-sociais">
-            <div class="formulario-envio" data-aos="fade-left">
+            <div class="formulario-envio">
             <form name="submit-to-google-sheet">
                 <input data-text="formnome" type="texto" name="Nome" placeholder="Nome" required>
                 <input type="email" name="Email" placeholder="Email" required>
@@ -283,10 +326,11 @@
             <span id="msg"></span>
         </div>
 
-        <div class="contatos-info" data-aos="fade-right">
+        <div class="contatos-info">
           <h3 data-text="info-contato">Informações de Contato</h3>
           <p><i class="fa-solid fa-envelope"></i>fabriciotrindade2001@gmail.com</p>
           <p><i class="fa-solid fa-phone"></i>(51) 98199-9014</p>
+           </div>
            </div>
       </div>
     </div>
