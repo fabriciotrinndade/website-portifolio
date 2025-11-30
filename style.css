@@ -928,40 +928,31 @@ form input, form textarea {
 @media only screen and (max-width: 900px) { /* em telas até 900px ativa*/
 
 .hamburguer {
-  position: fixed;   
-  top: 20px;        
-  left: 20px;      
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 40px;
-  height: 30px;
-  cursor: pointer;
-  z-index: 1000;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;   
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-.hamburguer span {
-  display: block;
-  height: 4px;
-  background: white;
-  border-radius: 5px;
-  transition: 0.3s;
-  transform-origin: center;
+.hamburguer::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0c9"; 
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* animação ao clicar */
-.hamburguer.active span:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
+.hamburguer.active::after {
+    content: "\f00d";
+    font-size: 2.6rem;
 }
-
-.hamburguer.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburguer.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -8px);
-}
-
 }
 
 /* --------------- SITE RESPONSIVO --------------- */
