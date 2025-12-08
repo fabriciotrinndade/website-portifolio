@@ -1,42 +1,47 @@
-# 🌐 Meu Portfólio Pessoal
+# Meu Portfólio Pessoal
 
 Bem-vindo(a) ao repositório do meu **Website Portfólio**!  
 
-🔗 **Acesse o site:** (https://fabriciotrindade.com.br)
+O site foi criado para mostrar minha trajetória profissional, formações e projetos pessoais de forma visual, moderna e responsiva.  
+
+Atualmente está **em desenvolvimento**, mas já apresenta uma versão funcional do portfólio.
 
 ---
 
-## 🧠 Sobre o projeto
-
-Este portfólio foi criado com o objetivo de apresentar minha trajetória profissional, formações e projetos pessoais, de forma visual e responsiva.  
-O design foi pensado para ser limpo, moderno e funcional — refletindo meu estilo e foco em tecnologia.
-
-O site está hospedado na **Netlify** com **domínio próprio**, garantindo melhor desempenho e acesso profissional.
-
----
-
-## 🚀 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **HTML5**  
 - **CSS3** (responsivo e com animações)  
 - **JavaScript**  
 - **AOS.js** (animações ao rolar a página)  
 - **Google Fonts / Icons**  
-- **Git** (versionamento)  
-- **Netlify** (deploy e hospedagem com domínio personalizado)
+- **Git** (controle de versão)  
+- **Netlify** (hospedagem com domínio próprio)
 
 ---
 
-## 💡 Melhorias futuras
+## Funcionalidades atuais
 
-- Adicionar projetos que desenvolvi na aba **Projetos**  
-- Incluir **formulário de contato funcional (com backend)**
+- Apresentação de projetos e experiências  
+- Navegação entre seções do portfólio  
+- Layout responsivo para desktop e mobile
 
 ---
 
-## 🖼️ Preview
+## Melhorias futuras
+
+- Adicionar mais projetos na aba **Projetos**  
+- Implementar **formulário de contato funcional** com backend  
+- Melhorar interatividade e animações
+
+---
+
+## Como acessar
+
+🔗 **Site online:** [https://fabriciotrindade.com.br](https://fabriciotrindade.com.br)
+
+---
+
+## Preview
 
 ![Screenshot do portfólio](img/pagina-completa.png)
-
-
-
